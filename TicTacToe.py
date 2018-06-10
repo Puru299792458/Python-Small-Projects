@@ -29,7 +29,7 @@ while game:
                 l[u1//3][u1%3]=user1
                 break
     else:
-        l[u1//3][u1%3]='x'
+        l[u1//3][u1%3]='user1'
     print("Matrix")
     for i in range(0,len(l)):
         for j in range(0,len(l[i])):
@@ -52,7 +52,7 @@ while game:
                 l[u2//3][u2%3]=user2
                 break
     else:
-        l[u2//3][u2%3]='o'
+        l[u2//3][u2%3]=user2
     if(l[0][0]==l[1][1]==l[2][2]==user2 or l[0][0]==l[1][0]==l[2][0]==user2 or l[0][0]==l[0][1]==l[0][2]==user2 or
     l[0][1]==l[1][1]==l[2][1]==user2 or l[0][2]==l[1][1]==l[2][0]==user2 or l[0][2]==l[1][2]==l[2][2]==user2 or
     l[1][0]==l[1][1]==l[1][2]==user2 or l[2][0]==l[2][1]==l[2][2]==user2):
