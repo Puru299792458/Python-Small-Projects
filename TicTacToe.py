@@ -4,6 +4,7 @@ user1=input("Choose your sign : ")
 if(user1 =='x'):
     user2='o'
 else:
+    user1='o'
     user2='x'
 print("Matrix")
 for i in range(0,len(l)):
@@ -15,6 +16,9 @@ game=True
 c=0
 while game:
     c+=1
+    if c>7:
+        print("Match Draw")
+        sys.exit()
     print("User 1")
     u1=int(input("Select a position to enter from out of 9 positions : "))
     if l[u1//3][u1%3]!='-':
@@ -22,7 +26,7 @@ while game:
             print("Enter again as the position is already filled :")
             u1=int(input("Select a position to enter from out of 9 positions : "))
             if(l[u1//3][u1%3]=='-'):
-                l[u1//3][u1%3]='x'
+                l[u1//3][u1%3]=user1
                 break
     else:
         l[u1//3][u1%3]='x'
@@ -45,7 +49,7 @@ while game:
             print("Enter again as the position is already filled :")
             u2=int(input("Select a position to enter from out of 9 positions : "))
             if(l[u2//3][u2%3]=='-'):
-                l[u2//3][u2%3]='o'
+                l[u2//3][u2%3]=user2
                 break
     else:
         l[u2//3][u2%3]='o'
@@ -58,6 +62,3 @@ while game:
         for j in range(0,len(l[i])):
             print(l[i][j],end=" ")
         print("\n")
-    if c>6:
-        print("Match is draw")
-        sys.exit()
