@@ -12,7 +12,9 @@ for i in range(0,len(l)):
     print("\n")
 print("------------------------Start the game-----------------------")
 game=True
+c=0
 while game:
+    c+=1
     print("User 1")
     u1=int(input("Select a position to enter from out of 9 positions : "))
     if l[u1//3][u1%3]!='-':
@@ -56,3 +58,6 @@ while game:
         for j in range(0,len(l[i])):
             print(l[i][j],end=" ")
         print("\n")
+    if c>6:
+        print("Match is draw")
+        sys.exit()
